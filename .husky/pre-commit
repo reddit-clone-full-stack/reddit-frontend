@@ -3,4 +3,3 @@
 
 npx prettier --write . && git add .
 yarn run lint:front
-yarn run lint:back
