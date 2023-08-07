@@ -28,18 +28,16 @@ const LeaderBoard = ({ subReddits }: Props) => {
 					</div>
 					{subReddits.map((item, index) => (
 						<Link key={item.id} href={`/r/${item.title}`}>
-							<a>
-								<div className="flex items-center border-b-[thin] border-b-[#edeff1] bg-white p-2 px-6 dark:bg-dark-100">
-									<span className="font-medium text-black dark:text-white">{++index}</span>
-									<div className=" ml-10 h-[40px]">
-										<ImageWrapper width={40} heigth={40} image={item.image} title={item.title} />
-									</div>
-									<p className="ml-2 text-[#1c1c1c] dark:text-white">r/{item.title}</p>
-									<div className="ml-auto max-w-[96px]">
-										<SubscriptionButtons id={item.id} />
-									</div>
+							<div className="flex items-center border-b-[thin] border-b-[#edeff1] bg-white p-2 px-6 dark:bg-dark-100">
+								<span className="font-medium text-black dark:text-white">{++index}</span>
+								<div className=" ml-10 h-[40px]">
+									<ImageWrapper width={40} heigth={40} image={item.image} title={item.title} />
 								</div>
-							</a>
+								<p className="ml-2 text-[#1c1c1c] dark:text-white">r/{item.title}</p>
+								<div className="ml-auto max-w-[96px]">
+									<SubscriptionButtons id={item.id} />
+								</div>
+							</div>
 						</Link>
 					))}
 				</div>

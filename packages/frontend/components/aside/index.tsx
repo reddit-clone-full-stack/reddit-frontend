@@ -42,7 +42,7 @@ export const Aside: React.FC = () => {
 				)}
 			</div>
 			<div className="flex items-center justify-center rounded-b bg-white py-3 px-6 dark:bg-dark-100">
-				<Link href={"/leaderboard"}>
+				<Link href={"/leaderboard"} legacyBehavior>
 					<div className="btn-secondary w-full text-center">View All</div>
 				</Link>
 			</div>

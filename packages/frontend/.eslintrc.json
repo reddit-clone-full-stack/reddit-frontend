@@ -1,5 +1,7 @@
 {
-	"extends": ["../../.eslintrc.json", "plugin:@nx/react-typescript", "next", "next/core-web-vitals"],
+	"extends": ["../../.eslintrc.json", "plugin:@nx/react-typescript", "next", "next/core-web-vitals", "prettier"],
+	"presets": ["next/babel"],
+	"plugins": [],
 	"ignorePatterns": ["!**/*"],
 	"settings": {
 		"import/resolver": {

@@ -36,8 +36,8 @@ const SubReddit = () => {
 									) : (
 										<div className="h-[54px] w-[54px] rounded-full border border-dashed border-[#878A8C]"></div>
 									)}
-									<Link href={`/r/${data.title}`}>
-										<a className="ml-2 cursor-pointer hover:underline">{data.title}</a>
+									<Link href={`/r/${data.title}`} className="ml-2 cursor-pointer hover:underline">
+										{data.title}
 									</Link>
 								</div>
 								<div className="mt-2">Welcome to {data.title}</div>

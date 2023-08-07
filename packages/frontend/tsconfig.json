@@ -18,7 +18,17 @@
 			"@/utils/*": ["utils/*"],
 			"@/hooks/*": ["hooks/*"]
 		},
-		"isolatedModules": true
+		"isolatedModules": true,
+		"strictNullChecks": true,
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"skipLibCheck": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
 	},
 	"jsconfigPaths": true,
 	"include": [
@@ -30,7 +40,8 @@
 		"src/**/*",
 		"public/**/*",
 		"components/**/*",
-		"."
+		".",
+		"../../packages/frontend/.next/types/**/*.ts"
 	],
 	"exclude": ["node_modules", "jest.config.ts"]
 }

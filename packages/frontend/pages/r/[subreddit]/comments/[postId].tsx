@@ -37,7 +37,7 @@ const PostPage = () => {
 					<UserInfo username={data.user.username} createdAt={data.user.createdAt} />
 				) : data?.subReddit ? (
 					<div className="ml-3 hidden w-[312px] max-w-full lg:block ">
-						<Link href={`/r/${router.query.subreddit}`}>
+						<Link href={`/r/${router.query.subreddit}`} legacyBehavior>
 							<div className="cursor-pointer rounded border border-solid border-gray-400 dark:border-dark-200">
 								<div className="rounded-t bg-cyan-500 p-3  text-white">About Community</div>
 								<div className="bg-white p-3 dark:bg-dark-100">

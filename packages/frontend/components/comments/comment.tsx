@@ -46,8 +46,8 @@ export const Comment: React.FC<Props> = memo(
 			<div className="my-3">
 				<div className="flex items-center">
 					<Image src={UserSvg} alt="user" width={36} height={36} className=" rounded-full bg-[#EDEFF1]" />
-					<Link href={`/user/${user.username}`}>
-						<a className="ml-2 hover:underline dark:text-white">{user.username}</a>
+					<Link href={`/user/${user.username}`} className="ml-2 hover:underline dark:text-white">
+						{user.username}
 					</Link>
 					<div className="ml-2 dark:text-white">{timeAgo(createdAt)}</div>
 				</div>

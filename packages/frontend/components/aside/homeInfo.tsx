@@ -36,7 +36,7 @@ export const HomeInfo: React.FC = memo(() => {
 				<p className="mt-2 dark:text-white">
 					Your personal Reddit frontpage. Come here to check in with your favorite communities.
 				</p>
-				<Link href={"/submit"}>
+				<Link href={"/submit"} legacyBehavior>
 					<button className="btn-primary mt-1 w-full">Create Post</button>
 				</Link>
 				<WithAuthMethods>

@@ -39,6 +39,7 @@ export const InfiniteQueryWrapper: React.FC<Props> = ({ data, fetchNextPage, isF
 							href={`${isSubReddit(post.subReddit?.title, post.id, post.user.username)}`}
 							target="_blank"
 							key={post.id}
+							legacyBehavior
 						>
 							<div className="cursor-pointer">
 								<PostWrapper

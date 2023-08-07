@@ -27,9 +27,7 @@ export const PostContent: React.FC<Props> = (props) => {
 				{props.children}
 				Posted by{" "}
 				<Link href={`/user/${props.username}`}>
-					<a>
-						<span className="mx-1 cursor-pointer hover:underline">u/{props.username}</span>
-					</a>
+					<span className="mx-1 cursor-pointer hover:underline">u/{props.username}</span>
 				</Link>
 				{timeAgo(props.createdAt)}
 			</div>
@@ -38,11 +36,9 @@ export const PostContent: React.FC<Props> = (props) => {
 				<PostText isBigText={isBigText} text={props.text} />
 			) : (
 				<Link href={props.path} target="_blank">
-					<a>
-						<div>
-							<PostText isBigText={isBigText} text={props.text} />
-						</div>
-					</a>
+					<div>
+						<PostText isBigText={isBigText} text={props.text} />
+					</div>
 				</Link>
 			)}
 

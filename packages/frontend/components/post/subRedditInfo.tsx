@@ -14,9 +14,7 @@ export const SubRedditInfo = ({ image, title }: Props) => {
 				<div className="h-[20px] w-[20px] rounded-full bg-cyan-400"></div>
 			)}
 			<Link href={`/r/${title}`}>
-				<a>
-					<span className="ml-1 font-bold text-black hover:underline dark:text-white">r/{title}</span>
-				</a>
+				<span className="ml-1 font-bold text-black hover:underline dark:text-white">r/{title}</span>
 			</Link>
 		</span>
 	)

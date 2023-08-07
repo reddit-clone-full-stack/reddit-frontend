@@ -21,12 +21,10 @@ export const Community: React.FC<Props> = ({ title, image, index, subRedditId })
 			) : (
 				<div className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-cyan-400"> /r </div>
 			)}
-			<Link href={`/r/${title}`}>
-				<a className="">
-					<p className="ml-2  max-w-[125px] cursor-pointer overflow-hidden text-ellipsis hover:underline dark:text-white">
-						r/{title}
-					</p>
-				</a>
+			<Link href={`/r/${title}`} className="">
+				<p className="ml-2  max-w-[125px] cursor-pointer overflow-hidden text-ellipsis hover:underline dark:text-white">
+					r/{title}
+				</p>
 			</Link>
 			<div className="ml-auto max-w-[96px]">
 				<SubscriptionButtons id={subRedditId} />

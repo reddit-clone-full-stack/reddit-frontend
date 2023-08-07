@@ -55,7 +55,7 @@ export const UserProfile: React.FC = () => {
 											<p className="ml-3">Logout</p>
 										</div>
 									) : (
-										<Link href={"/account/login"}>
+										<Link href={"/account/login"} legacyBehavior>
 											<div className="flex flex-1 items-center">
 												<BsBoxArrowRight />
 												<p className="ml-3">Sign up or Log in</p>
