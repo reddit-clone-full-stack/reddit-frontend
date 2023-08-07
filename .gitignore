@@ -40,3 +40,6 @@ Thumbs.db
 yarn.lock
 .env
 .env.local
+
+# Next.js
+.next

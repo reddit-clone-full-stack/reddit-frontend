@@ -26,3 +26,9 @@ Backend:
 -   PostgreSQL: ORM Prisma
 
 Link to app https://full-stack-reddit-clone.vercel.app/
+
+In plan
+migrare to 13 version
+find better package to wysivyg
+create s3 bucket for stoing images
+think about better deployment

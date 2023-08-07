@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withNx = require("@nrwl/next/plugins/with-nx")
+const withNx = require("@nx/next/plugins/with-nx")
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path")
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -8,7 +8,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 })
 
 /**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
+ * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
 	nx: {
