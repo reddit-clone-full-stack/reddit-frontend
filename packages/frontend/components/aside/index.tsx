@@ -30,7 +30,7 @@ export const Aside: React.FC = () => {
 				{isLoading ? (
 					<CommunityLoader />
 				) : (
-					data.map((item, index) => (
+					data && data.map((item, index) => (
 						<Community
 							title={item.title}
 							image={item.image}

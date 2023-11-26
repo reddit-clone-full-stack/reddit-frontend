@@ -3,9 +3,9 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"dev:front": "nx run frontend:serve --port=3000",
-		"build:front": "nx build frontend --configuration production --with-deps --generatePackageJson --progress --no-sourceMap",
-		"lint:front": "nx run frontend:lint --fix --max-warnings=0",
+		"dev:front": "npx nx run frontend:serve --port=3000",
+		"build:front": "npx nx build frontend --configuration production --with-deps --generatePackageJson --progress --no-sourceMap",
+		"lint:front": "npx nx run frontend:lint --fix --max-warnings=0",
 		"prepare": "husky install"
 	},
 	"engines": {

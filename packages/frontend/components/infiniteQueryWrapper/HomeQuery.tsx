@@ -9,11 +9,12 @@ import { InfiniteQueryWrapper } from "./infiniteQueryWrapper"
 export const HomeQuery = () => {
 	const isAuthenticated = useZustandStore((state) => state.isAuthenticated)
 	const { data, isLoading, fetchNextPage, isFetchingNextPage, hasNextPage } = UseGetAllPost(isAuthenticated)
+  console.log(data)
 	return (
 		<>
 			{isLoading ? (
 				[...Array(5)].map((item, index) => <PostLoader key={index} />)
-			) : data.pages[0].posts.length > 0 ? (
+			) : data?.pages[0].posts.length > 0 ? (
 				<InfiniteQueryWrapper
 					data={data}
 					fetchNextPage={fetchNextPage}

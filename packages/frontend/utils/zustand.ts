@@ -23,6 +23,7 @@ export const useZustandStore = create<State>((set) => ({
 			localStorage.setItem("token", response.data.accessToken)
 			set(
 				produce((state) => {
+					console.log(response.data, " zustand save")
 					state.user = response.data.user
 					state.isAuthenticated = true
 

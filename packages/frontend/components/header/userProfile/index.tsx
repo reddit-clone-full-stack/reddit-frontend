@@ -16,8 +16,10 @@ export const UserProfile: React.FC = () => {
 		await $api("auth/logout", {
 			method: "GET"
 		})
+
 		location.reload()
 	}
+  console.log(isAuthenticated)
 	return (
 		<div className="text-right lg:ml-10 ">
 			<Menu as="div" className="relative inline-block text-left">
@@ -36,11 +38,13 @@ export const UserProfile: React.FC = () => {
 				>
 					<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-dark-100">
 						<div className="px-1 py-1 dark:bg-dark-100">
-							<MenuItem>
-								<div className="flex flex-1 items-center justify-between">
-									<p>Profile</p>
-								</div>
+              {isAuthenticated &&
+							  <MenuItem>
+								  <div className="flex flex-1 items-center justify-between">
+									  <p>Profile</p>
+								  </div>
 							</MenuItem>
+              }
 							<MenuItem>
 								<div className="flex flex-1 items-center justify-between">
 									<p>Dark Mode:</p>
