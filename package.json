@@ -4,10 +4,9 @@
 	"license": "MIT",
 	"scripts": {
 		"dev:front": "npx nx run frontend:serve --port=3000",
-		"build:front": "npx nx build frontend --configuration production --with-deps --generatePackageJson --progress --no-sourceMap",
+		"build:front": "yarn prisma generate && npx nx build frontend --configuration production --with-deps --generatePackageJson --progress --no-sourceMap",
 		"lint:front": "npx nx run frontend:lint --fix --max-warnings=0",
-		"prepare": "husky install",
-		"postinstall": "prisma generate"
+		"prepare": "husky install"
 	},
 	"private": true,
 	"devDependencies": {
