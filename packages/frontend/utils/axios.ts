@@ -1,6 +1,6 @@
 import axios from "axios"
-// export const API_URL = "https://fullstack-reddit-clone-production.up.railway.app/"
-export const API_URL = process.env.NEXT_PUBLIC_BACKEND_API
+// export const API_URL = process.env.NEXT_PUBLIC_BACKEND_API
+export const API_URL = "http://64.227.119.203:3333"
 //eslint-disable-next-line
 export const $api = axios.create({
 	baseURL: API_URL,
