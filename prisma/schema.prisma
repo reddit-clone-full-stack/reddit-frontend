@@ -1,7 +1,6 @@
 generator client {
 	provider = "prisma-client-js"
-	previewFeatures = ["referentialIntegrity"]
-
+  binaryTargets = ["debian-openssl-3.0.x", "debian-openssl-1.1.x"]
 }
 
 datasource db {
@@ -15,7 +14,7 @@ model User {
 	id        Int      @id @default(autoincrement())
 	username  String   @db.VarChar(255)
 	password  String
-	email     String  
+	email     String
 	createdAt DateTime @default(now())
 
 	comments   Comment[]
@@ -105,5 +104,5 @@ model Vote {
 	value  Boolean
 	user   User @relation(fields: [userId], references: [id])
 	post   Post @relation(fields: [postId], references: [id])
-	
+
 }

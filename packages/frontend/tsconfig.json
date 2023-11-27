@@ -1,47 +1,66 @@
 {
-	"extends": "../../tsconfig.base.json",
-	"compilerOptions": {
-		"jsx": "preserve",
-		"allowJs": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": false,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"resolveJsonModule": true,
-		"incremental": true,
-		"types": ["jest", "node"],
-		"baseUrl": ".",
-		"paths": {
-			"@/components/*": ["components/*"],
-			"@/public/*": ["public/*"],
-			"@/utils/*": ["utils/*"],
-			"@/hooks/*": ["hooks/*"]
-		},
-		"isolatedModules": true,
-		"strictNullChecks": true,
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"skipLibCheck": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"plugins": [
-			{
-				"name": "next"
-			}
-		]
-	},
-	"jsconfigPaths": true,
-	"include": [
-		"**/*.ts",
-		"**/*.tsx",
-		"**/*.js",
-		"**/*.jsx",
-		"next-env.d.ts",
-		"src/**/*",
-		"public/**/*",
-		"components/**/*",
-		".",
-		"../../packages/frontend/.next/types/**/*.ts"
-	],
-	"exclude": ["node_modules", "jest.config.ts"]
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "types": [
+      "jest",
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ]
+    },
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "jsconfigPaths": true,
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "next-env.d.ts",
+    "src/**/*",
+    "public/**/*",
+    "components/**/*",
+    ".",
+    "../../packages/frontend/.next/types/**/*.ts",
+    "../../dist/packages/frontend/.next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "jest.config.ts"
+  ]
 }
