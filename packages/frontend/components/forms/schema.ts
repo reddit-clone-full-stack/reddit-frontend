@@ -13,8 +13,7 @@ export const schemaRegistration = yup.object().shape({
 		.string()
 		.required("confirm your passowrd")
 		.oneOf([yup.ref("password"), null], "Passwords must match"),
-	username: yup.string().required().min(3, "Minimum of 3 characters"),
-	captcha: yup.string().required().min(1)
+	username: yup.string().required().min(3, "Minimum of 3 characters")
 })
 
 export const schemaLogin = yup.object().shape({

@@ -21,7 +21,6 @@ const passwordErrorsText = [
 	EPasswordErrorTexts.Min
 ]
 
-let captcha
 
 export const RegistrationForm = () => {
 	const { setUser, logIn } = useZustandStore((state) => ({ setUser: state.setUser, logIn: state.isLogin }))
@@ -58,15 +57,9 @@ export const RegistrationForm = () => {
 		} catch (error) {
 			setError("email", { message: "email or username is already taken" })
 			setError("username", { message: "email or username is already taken" })
-		} finally {
-			captcha.reset()
-			setValue("captcha", "")
 		}
 	}
 
-	const handleCaptcha = (value) => {
-		setValue("captcha", value)
-	}
 
 	return (
 		<FormProvider {...methods}>
@@ -81,17 +74,6 @@ export const RegistrationForm = () => {
 					))}
 				</div>
 				<FormInput name="passwordConfirm" type="password" />
-				<div className="relative mt-3">
-					<ReCAPTCHA
-						sitekey="6LcHT-wgAAAAAHfE6SW0gw5OL5e0NYSSmHMjZEOE"
-						onChange={handleCaptcha}
-						className="scale-75 sm:scale-100"
-						ref={(el) => {
-							captcha = el
-						}}
-					/>
-					<p className="-mt-[2px] ml-3 text-xs text-red-500">{errors?.captcha?.message}</p>
-				</div>
 
 				<button
 					type="submit"

@@ -3,7 +3,6 @@ export type HookRegistrationFormValues = {
 	password: string
 	passwordConfirm: string
 	username: string
-	captcha: string
 }
 export type HookLoginFormValues = {
 	email: string
